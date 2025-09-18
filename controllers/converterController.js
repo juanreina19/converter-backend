@@ -6,7 +6,8 @@ const weightConverter = require('../services/weightConverter');
 function money(req, res) {
     const { body } = req;
     const { value, from, to } = body;
-    const result = moneyConverter(value, from, to);
+    const v = parseFloat(value);
+    const result = moneyConverter(v, from, to);
     res.json({
         result: result
     })
@@ -25,7 +26,8 @@ function temperature(req, res) {
 function time(req, res) {
     const { body } = req;
     const { value, from, to } = body;
-    const result = timeConverter(value, from, to);
+    const v = parseFloat(value);
+    const result = timeConverter(v, from, to);
     res.json({
         result: result
     })
@@ -34,7 +36,8 @@ function time(req, res) {
 function weight(req, res) {
     const { body } = req;
     const { value, from, to } = body;
-    const result = weightConverter(value, from, to);
+    const v = parseFloat(value);
+    const result = weightConverter(v, from, to);
     res.json({
         result: result
     })
