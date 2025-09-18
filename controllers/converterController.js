@@ -15,7 +15,8 @@ function money(req, res) {
 function temperature(req, res) {
     const { body } = req;
     const { value, from, to } = body;
-    const result = temperatureConverter(value, from, to);
+    const v = parseFloat(value);
+    const result = temperatureConverter(v, from, to);
     res.json({
         result: result,
     })
