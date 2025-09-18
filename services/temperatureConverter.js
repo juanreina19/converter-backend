@@ -17,7 +17,7 @@ function convertTemperature(value, from, to) {
         }
     };
 
-    return Math.round((conversions[from][to](value)) * 100) / 100;
+    return conversions[from][to](value);
 }
 
 module.exports = convertTemperature;
