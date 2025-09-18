@@ -8,7 +8,7 @@ function money(req, res) {
     const { value, from, to } = body;
     const result = moneyConverter(value, from, to);
     res.json({
-        resultado: result
+        result: result
     })
 }
 
@@ -17,7 +17,7 @@ function temperature(req, res) {
     const { value, from, to } = body;
     const result = temperatureConverter(value, from, to);
     res.json({
-        resultado: result,
+        result: result,
     })
 }
 
@@ -26,7 +26,7 @@ function time(req, res) {
     const { value, from, to } = body;
     const result = timeConverter(value, from, to);
     res.json({
-        resultado: result
+        result: result
     })
 }
 
@@ -35,7 +35,7 @@ function weight(req, res) {
     const { value, from, to } = body;
     const result = weightConverter(value, from, to);
     res.json({
-        resultado: result
+        result: result
     })
 }
 
