@@ -9,7 +9,7 @@ const times = {
 
 function timeConverter(value, from, to) {
     const res = (value * times[from]) / times[to];
-    return Math.round(res * 100) / 100
+    return res
 }
 
 console.log(timeConverter(48, 'hour', 'day'))
